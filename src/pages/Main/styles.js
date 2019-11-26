@@ -6,13 +6,13 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const Text = styled.Text`
-  font-size: 16px;
+  font-size: 14px;
   align-self: center;
   color: ${colors.primaryLight};
 `;
 
 export const List = styled.FlatList`
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 0px 5px;
 `;
 
@@ -67,7 +67,25 @@ export const Footer = styled.View`
 `;
 
 export const Category = styled.View`
-  height: 10px;
-  width: 40px;
+  height: 30px;
+  width: 70px;
   background: ${props => props.background};
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  border-radius: 5px;
+`;
+
+export const TxtCategory = styled.Text`
+  color: ${colors.app};
+  font-size: 12px;
+  margin: 5px 2px;
+`;
+
+export const ContentText = styled.View`
+  height: 25px;
+  background-color: ${colors.darkTransparent};
+  border-radius: 10px;
+  justify-content: center;
+  margin: 0 60px 5px;
 `;

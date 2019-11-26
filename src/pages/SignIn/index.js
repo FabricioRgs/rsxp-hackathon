@@ -6,11 +6,12 @@ import {
   Form,
   FormInput,
   SubmitButton,
-  TxtCompany,
+  Title,
+  TitleBold,
   BtClick,
   List,
   Item,
-  ItemEmpty,
+  IconAwesome,
   Touch,
   TxtOption,
 } from './styles';
@@ -19,26 +20,30 @@ import Background from '~/components/Background';
 const categoriesInit = [
   {
     id: 1,
-    title: 'História',
+    title: 'Esporte',
     selected: false,
+    color: '#00b09b',
     tag: 1,
   },
   {
     id: 2,
     title: 'Jogos',
     selected: false,
+    color: '#F16529',
     tag: 2,
   },
   {
     id: 3,
     title: 'Negócios',
     selected: false,
+    color: '#8E2DE2',
     tag: 1,
   },
   {
     id: 4,
-    title: 'Enteterimento',
+    title: 'Saúde',
     selected: false,
+    color: '#f12711',
     tag: 2,
   },
 ];
@@ -75,7 +80,8 @@ export default function SignIn({navigation}) {
         <Form>
           <>
             <BtClick>
-              <TxtCompany>RS - XP</TxtCompany>
+              <Title>be</Title>
+              <TitleBold>tech</TitleBold>
             </BtClick>
             <FormInput
               icon="person"
@@ -93,21 +99,18 @@ export default function SignIn({navigation}) {
               data={categories}
               keyExtractor={item => item.id}
               numColumns={2}
-              renderItem={({item}) => {
-                if (item.empty) {
-                  return <ItemEmpty />;
-                }
-                return (
-                  <Item>
-                    <Touch
-                      selected={item.selected}
-                      tag={item.tag}
-                      onPress={() => handleOption(item)}>
-                      <TxtOption>{item.title}</TxtOption>
-                    </Touch>
-                  </Item>
-                );
-              }}
+              renderItem={({item}) => (
+                <Item>
+                  <Touch
+                    selected={item.selected}
+                    background={item.color}
+                    tag={item.tag}
+                    onPress={() => handleOption(item)}>
+                    {item.selected && <IconAwesome name="check" />}
+                    <TxtOption>{item.title}</TxtOption>
+                  </Touch>
+                </Item>
+              )}
             />
           </>
           <SubmitButton onPress={handleSubmit}>Acessar</SubmitButton>

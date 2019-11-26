@@ -29,8 +29,15 @@ export const IconRight = styled(Icon).attrs({
 })``;
 
 export const Title = styled.Text`
-  /* width: ${metrics.screenWidth - 90}; */
   text-align: center;
   color: ${colors.app};
-  font-size: 18px;
+  font-size: 22px;
+`;
+
+export const TitleBold = styled.Text`
+  text-align: center;
+  color: ${colors.app};
+  font-size: 22px;
+  font-weight: bold;
+  /* margin-left: 3px; */
 `;

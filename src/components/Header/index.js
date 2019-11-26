@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Container, IconRight, Title, ReturnButtom} from './styles';
+import {Container, IconRight, Title, ReturnButtom, TitleBold} from './styles';
 
 export default function Header({navigation, action}) {
   return (
     <Container>
-      <Title>RS / XP</Title>
+      <Title>be</Title>
+      <TitleBold>tech</TitleBold>
       <ReturnButtom onPress={() => (action ? action() : navigation())}>
         <IconRight />
       </ReturnButtom>

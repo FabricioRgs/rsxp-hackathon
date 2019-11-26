@@ -42,7 +42,12 @@ export const TxtCompany = styled.Text`
 
 export const BtClick = styled.TouchableOpacity.attrs({
   activeOpacity: 0.6,
-})``;
+})`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+`;
 
 export const List = styled.FlatList`
   margin-top: 10px;
@@ -65,24 +70,39 @@ export const Touch = styled.TouchableOpacity.attrs({
   activeOpacity: 0.6,
 })`
   background-color: ${props =>
-    props.selected ? darken(0.1, colors.primaryDarker) : colors.primaryDarker};
+    props.selected ? darken(0.2, props.background) : props.background};
   height: 150px;
   width: 150px;
   border-radius: 75px;
   justify-content: center;
   align-items: center;
   margin-top: ${props => (props.tag === 1 ? '0px' : '30px')};
-  border-width: 6px;
-  border-color: ${colors.primary};
+  border-width: 2px;
+  border-color: ${colors.app};
 `;
 
 export const TxtOption = styled.Text`
   color: ${colors.app};
-  font-size: 16px;
+  font-size: 22px;
   margin-top: 5px;
+  font-weight: bold;
 `;
 
 export const IconAwesome = styled(IconFontAwesome).attrs({
-  size: 50,
+  size: 30,
   color: colors.app,
 })``;
+
+export const Title = styled.Text`
+  text-align: center;
+  color: ${colors.app};
+  font-size: 22px;
+`;
+
+export const TitleBold = styled.Text`
+  text-align: center;
+  color: ${colors.app};
+  font-size: 22px;
+  font-weight: bold;
+  /* margin-left: 3px; */
+`;
