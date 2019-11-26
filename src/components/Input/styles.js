@@ -5,7 +5,7 @@ import {colors} from '~/styles';
 export const Container = styled.View`
   padding: 0 15px;
   height: 46px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 
   flex-direction: row;

@@ -17,6 +17,8 @@ import {
 } from './styles';
 import Background from '~/components/Background';
 
+import {colors} from '~/styles';
+
 const categoriesInit = [
   {
     id: 1,
@@ -76,7 +78,10 @@ export default function SignIn({navigation}) {
   return (
     <Background>
       <Container>
-        <StatusBar barStyle="light-content" />
+        <StatusBar
+          backgroundColor={colors.primaryDarker}
+          barStyle="light-content"
+        />
         <Form>
           <>
             <BtClick>

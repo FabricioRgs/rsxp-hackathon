@@ -19,6 +19,8 @@ import {
 import Background from '~/components/Background';
 import Header from '~/components/Header';
 
+import {colors} from '~/styles';
+
 const companies = [
   {
     id: 1,
@@ -113,13 +115,16 @@ const companies = [
 ];
 
 export default function Main({navigation}) {
-  var player;
+  // var player;
   function handleOption(item) {}
   return (
     <Background>
       <Container>
         <Header navigation={() => navigation.navigate('SignIn')} />
-        <StatusBar barStyle="light-content" />
+        <StatusBar
+          backgroundColor={colors.primaryDarker}
+          barStyle="light-content"
+        />
         <ContentText>
           <Text>Assuntos de seu interesse:</Text>
         </ContentText>

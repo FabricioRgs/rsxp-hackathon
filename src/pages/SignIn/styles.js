@@ -50,7 +50,9 @@ export const BtClick = styled.TouchableOpacity.attrs({
 `;
 
 export const List = styled.FlatList`
-  margin-top: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  z-index: 1;
 `;
 
 export const ItemEmpty = styled.View`
