@@ -18,10 +18,9 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   padding: 0 10px;
 `;
 
-export const Form = styled.View`
+export const Form = styled.SafeAreaView`
   flex: 1;
   align-self: stretch;
-  margin: 50px 0;
   justify-content: space-between;
 `;
 
