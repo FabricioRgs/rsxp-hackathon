@@ -48,6 +48,20 @@ const categoriesInit = [
     color: '#f12711',
     tag: 2,
   },
+  {
+    id: 5,
+    title: 'Lógica',
+    selected: false,
+    color: '#AC4F88',
+    tag: 2,
+  },
+  {
+    id: 6,
+    title: 'Tecnologia',
+    selected: false,
+    color: '#345D7A',
+    tag: 2,
+  },
 ];
 
 export default function SignIn({navigation}) {
