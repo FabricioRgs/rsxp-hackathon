@@ -4,7 +4,7 @@ import {colors} from '~/styles';
 
 export const Container = styled(BaseButton)`
   height: 46px;
-  background: ${colors.blueDark};
+  background: ${colors.app};
 
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@ export const Container = styled(BaseButton)`
 `;
 
 export const Text = styled.Text`
-  color: #fff;
+  color: ${colors.primaryDarker};
   font-weight: bold;
   font-size: 16px;
 `;
