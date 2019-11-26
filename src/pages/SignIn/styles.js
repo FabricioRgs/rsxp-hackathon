@@ -16,6 +16,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   /* justify-content: center; */
   align-items: center;
   padding: 0 10px;
+  margin-bottom: ${Platform.OS === 'android' ? 10 : 0}px;
 `;
 
 export const Form = styled.SafeAreaView`
