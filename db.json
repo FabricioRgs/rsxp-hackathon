@@ -1,4 +1,26 @@
 {
+  "posts": [
+    {
+      "id": 1,
+      "name": "Empresa A",
+      "description":
+        "Mostraremos aqui como é o nosso processo de criação, e como nosso time trabalha!",
+      "categories": [
+        {
+          "id": 2,
+          "title": "Jogos",
+          "color": "#F16529"
+        }
+      ],
+      "img":
+        "https://www.riotgames.com/darkroom/800/4055f068b0bc39bbe60d08491a39994b:0ff2ceae3e7bed5e6f2c9c5a1aded2c0/riot-fist-container-white-red.png",
+      "media": {
+        "type": "video",
+        "uri": "https://www.youtube.com/watch?v=zSo8Zbvh9mg",
+        "id": "zSo8Zbvh9mg"
+      }
+    }
+  ],
   "categories": [
     {
       "id": 1,

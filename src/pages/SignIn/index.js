@@ -19,58 +19,20 @@ import Background from '~/components/Background';
 
 import {colors} from '~/styles';
 
-const categoriesInit = [
-  {
-    id: 1,
-    title: 'Esporte',
-    selected: false,
-    color: '#00b09b',
-    tag: 1,
-  },
-  {
-    id: 2,
-    title: 'Jogos',
-    selected: false,
-    color: '#F16529',
-    tag: 2,
-  },
-  {
-    id: 3,
-    title: 'Negócios',
-    selected: false,
-    color: '#8E2DE2',
-    tag: 1,
-  },
-  {
-    id: 4,
-    title: 'Saúde',
-    selected: false,
-    color: '#f12711',
-    tag: 2,
-  },
-  {
-    id: 5,
-    title: 'Lógica',
-    selected: false,
-    color: '#AC4F88',
-    tag: 2,
-  },
-  {
-    id: 6,
-    title: 'Tecnologia',
-    selected: false,
-    color: '#345D7A',
-    tag: 2,
-  },
-];
+import api from '~/services/api';
 
 export default function SignIn({navigation}) {
   const [name, setName] = useState('');
-  const [categories, setCategories] = useState('');
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    setCategories(categoriesInit);
+    loadCategories();
   }, []);
+
+  async function loadCategories() {
+    const fetchedCategories = await api.get('/categories');
+    setCategories(fetchedCategories.data);
+  }
 
   function handleSubmit() {
     navigation.navigate('Main');
