@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {StatusBar} from 'react-native';
 import YouTube from 'react-native-youtube';
 
@@ -21,6 +21,7 @@ import Background from '~/components/Background';
 import Header from '~/components/Header';
 
 import {colors} from '~/styles';
+import api from '~/services/api';
 
 const companies = [
   {
@@ -122,6 +123,18 @@ const companies = [
 
 export default function Main({navigation}) {
   var player;
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    loadPosts();
+  }, []);
+
+  async function loadPosts() {
+    var fetchedPosts = await api.get('/posts');
+    setPosts(fetchedPosts.data);
+  }
+
   function handleOption(item) {}
   return (
     <Background>
@@ -136,7 +149,7 @@ export default function Main({navigation}) {
         </ContentText>
         <List
           listKey={(item, index) => index}
-          data={companies}
+          data={posts}
           keyExtractor={item => item.id.toString()}
           renderItem={({item}) => (
             <Touch
@@ -150,7 +163,7 @@ export default function Main({navigation}) {
               <TxtDescription>{item.description}</TxtDescription>
               {item.media && (
                 <MediaContainer>
-                  {item.media.type == 'video' && (
+                  {item.media.type === 'video' && (
                     <YouTube
                       apiKey="AIzaSyAtwflJjX65-8nnONj0WtShZ98kUHpkCOg"
                       videoId={item.media.id}

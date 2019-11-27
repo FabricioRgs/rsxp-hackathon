@@ -11,6 +11,7 @@ export const Container = styled.SafeAreaView`
   padding: 0 5px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 `;
 
 export const ReturnButtom = styled.TouchableOpacity.attrs({
@@ -31,13 +32,13 @@ export const IconRight = styled(Icon).attrs({
 export const Title = styled.Text`
   text-align: center;
   color: ${colors.app};
-  font-size: 22px;
+  font-size: 36px;
 `;
 
 export const TitleBold = styled.Text`
   text-align: center;
   color: ${colors.app};
-  font-size: 22px;
+  font-size: 36px;
   font-weight: bold;
   /* margin-left: 3px; */
 `;

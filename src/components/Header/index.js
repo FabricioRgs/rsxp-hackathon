@@ -8,9 +8,9 @@ export default function Header({navigation, action}) {
     <Container>
       <Title>be</Title>
       <TitleBold>tech</TitleBold>
-      <ReturnButtom onPress={() => (action ? action() : navigation())}>
+      {/* <ReturnButtom onPress={() => (action ? action() : navigation())}>
         <IconRight />
-      </ReturnButtom>
+      </ReturnButtom> */}
     </Container>
   );
 }
