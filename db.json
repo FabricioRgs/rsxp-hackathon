@@ -52,6 +52,30 @@
       ],
       "img":
         "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+    },
+    {
+      "id": 3,
+      "name": "Empresa C",
+      "description":
+        "Então voĉe curte assitir futebol ? Que tal ver como as coisas funcionam por trás das câmeras ? Venha ver como nós utilizamos a programação nas nossas partidas!",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Esporte",
+          "color": "#00b09b"
+        },
+        {
+          "id": 6,
+          "title": "Tecnologia",
+          "color": "#345D7A",
+        }
+      ],
+      "img":
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqPCOWBWfMWED7STHRDj-xUF0bHpcUryDg0fNVbe5zrfuvRVZW",
+      "media": {
+        "type": "image",
+        "uri": "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+      }
     }
   ],
   "categories": [
