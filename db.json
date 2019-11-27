@@ -37,6 +37,21 @@
         "type": "image",
         "uri": "https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
       }
+    },
+    {
+      "id": 3,
+      "name": "Empresa C",
+      "description":
+        "Pra você que curte a area da saúde, teremos um encontro muito bacana na próxima quinta-feira. Bora participar? Nos reuniremos para conversar sobre como a tecnologia é aplicada no diagnóstico de exames.",
+      "categories": [
+        {
+          "id": 4,
+          "title": "Saúde",
+          "color": "#f12711"
+        }
+      ],
+      "img":
+        "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
     }
   ],
   "categories": [
