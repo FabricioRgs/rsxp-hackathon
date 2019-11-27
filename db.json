@@ -16,8 +16,26 @@
         "https://www.riotgames.com/darkroom/800/4055f068b0bc39bbe60d08491a39994b:0ff2ceae3e7bed5e6f2c9c5a1aded2c0/riot-fist-container-white-red.png",
       "media": {
         "type": "video",
-        "uri": "https://www.youtube.com/watch?v=zSo8Zbvh9mg",
         "id": "zSo8Zbvh9mg"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Empresa B",
+      "description":
+        "Conheça nossa empresa e como é trabalhar com robótica!",
+      "categories": [
+        {
+          "id": 3,
+          "title": "Robótica",
+          "color": "#8E2DE2"
+        }
+      ],
+      "img":
+        "https://www.riotgames.com/darkroom/800/4055f068b0bc39bbe60d08491a39994b:0ff2ceae3e7bed5e6f2c9c5a1aded2c0/riot-fist-container-white-red.png",
+      "media": {
+        "type": "image",
+        "uri": "https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
       }
     }
   ],
