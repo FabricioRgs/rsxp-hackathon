@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Esporte",
+      "selected": false,
+      "color": "#00b09b",
+      "tag": 1
+    },
+    {
+      "id": 2,
+      "title": "Jogos",
+      "selected": false,
+      "color": "#F16529",
+      "tag": 2
+    },
+    {
+      "id": 3,
+      "title": "Robótica",
+      "selected": false,
+      "color": "#8E2DE2",
+      "tag": 1
+    },
+    {
+      "id": 4,
+      "title": "Saúde",
+      "selected": false,
+      "color": "#f12711",
+      "tag": 2
+    },
+    {
+      "id": 5,
+      "title": "Desafios",
+      "selected": false,
+      "color": "#AC4F88",
+      "tag": 1
+    },
+    {
+      "id": 6,
+      "title": "Tecnologia",
+      "selected": false,
+      "color": "#345D7A",
+      "tag": 2
+    }
+  ]
+}
