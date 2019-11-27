@@ -82,14 +82,33 @@ export default function SignIn({navigation}) {
               numColumns={2}
               renderItem={({item}) => (
                 <Item>
+                  {/* <ImageBackground
+                    source={esporte}
+                    resizeMode="stretch"
+                    blurRadius={6}
+                    imageStyle={{borderRadius: 25}}
+                    style={{
+                      height: 150,
+                      width: 150,
+                      marginBottom: 15,
+                    }}> */}
                   <Touch
                     selected={item.selected}
-                    background={item.color}
+                    color={item.color}
                     tag={item.tag}
                     onPress={() => handleOption(item)}>
-                    {item.selected && <IconAwesome name="check" />}
-                    <TxtOption>{item.title}</TxtOption>
+                    {item.selected && (
+                      <IconAwesome
+                        selected={item.selected}
+                        color={item.color}
+                        name="check"
+                      />
+                    )}
+                    <TxtOption selected={item.selected} color={item.color}>
+                      {item.title}
+                    </TxtOption>
                   </Touch>
+                  {/* </ImageBackground> */}
                 </Item>
               )}
             />

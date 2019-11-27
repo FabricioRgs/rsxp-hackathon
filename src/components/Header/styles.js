@@ -6,7 +6,7 @@ import {colors, metrics} from '~/styles';
 
 export const Container = styled.SafeAreaView`
   flex-direction: row;
-  height: 50px;
+  height: 80px;
   background: transparent;
   padding: 0 5px;
   align-items: center;
@@ -38,7 +38,8 @@ export const Title = styled.Text`
 export const TitleBold = styled.Text`
   text-align: center;
   color: ${colors.app};
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
+  margin-top: 15px;
   /* margin-left: 3px; */
 `;

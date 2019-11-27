@@ -175,7 +175,7 @@ export default function Main({navigation}) {
               <Footer>
                 {item.categories.map(cat => {
                   return (
-                    <Category background={cat.color}>
+                    <Category key={cat.id} background={cat.color}>
                       <TxtCategory>{cat.title}</TxtCategory>
                     </Category>
                   );

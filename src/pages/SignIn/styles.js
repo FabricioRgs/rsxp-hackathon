@@ -26,7 +26,7 @@ export const Form = styled.SafeAreaView`
 `;
 
 export const FormInput = styled(Input)`
-  margin-bottom: 10px;
+  margin: 10px;
 `;
 
 export const SubmitButton = styled(Button)`
@@ -50,7 +50,7 @@ export const BtClick = styled.TouchableOpacity.attrs({
 `;
 
 export const List = styled.FlatList`
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 4px;
   z-index: 1;
 `;
@@ -66,21 +66,23 @@ export const Item = styled.View`
   align-items: center;
   /* height: 170px; */
   /* border-width: 1px; */
+  border-radius: 25px;
 `;
 
 export const Touch = styled.TouchableOpacity.attrs({
   activeOpacity: 0.6,
 })`
   background-color: ${props =>
-    props.selected ? darken(0.2, props.background) : props.background};
-  height: 150px;
-  width: 150px;
-  border-radius: 75px;
+    props.selected ? darken(0.2, props.color) : props.color};
+  height: 120px;
+  width: 170px;
+  border-radius: 25px;
   justify-content: center;
   align-items: center;
-  margin-top: ${props => (props.tag === 1 ? '0px' : '30px')};
+  /* margin-bottom: ${props => (props.tag === 1 ? '0px' : '30px')}; */
   border-width: 2px;
   border-color: ${colors.app};
+  margin-bottom: 15px;
 `;
 
 export const TxtOption = styled.Text`
@@ -92,19 +94,21 @@ export const TxtOption = styled.Text`
 
 export const IconAwesome = styled(IconFontAwesome).attrs({
   size: 30,
-  color: colors.app,
-})``;
+})`
+  color: ${colors.app};
+`;
 
 export const Title = styled.Text`
   text-align: center;
   color: ${colors.app};
-  font-size: 22px;
+  font-size: 52px;
 `;
 
 export const TitleBold = styled.Text`
   text-align: center;
   color: ${colors.app};
-  font-size: 22px;
+  font-size: 62px;
   font-weight: bold;
+  margin-top: 20px;
   /* margin-left: 3px; */
 `;
