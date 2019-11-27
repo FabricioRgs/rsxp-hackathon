@@ -1,6 +1,6 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-// import Video from 'react-native-video';
+import YouTube from 'react-native-youtube';
 
 import {
   Container,
@@ -15,6 +15,7 @@ import {
   Category,
   TxtCategory,
   ContentText,
+  MediaContainer,
 } from './styles';
 import Background from '~/components/Background';
 import Header from '~/components/Header';
@@ -24,24 +25,24 @@ import {colors} from '~/styles';
 const companies = [
   {
     id: 1,
-    name: 'Empresa A',
+    name: 'Riot Games',
     description:
-      'I was looking for a native video component in React Native and was not able to find one, so I decided to draft this piece about a library I found by react-native-community called react-native-video.',
+      'Mostraremos aqui como é o nosso processo de criação, e como nosso time trabalha!',
     categories: [
       {
-        id: 1,
-        title: 'Negócios',
-        color: '#8E2DE2',
-      },
-      {
-        id: 2,
-        title: 'Saúde',
-        color: '#f12711',
+        id: 5,
+        title: 'Jogos',
+        color: '#F16529',
       },
     ],
     color: 'blue',
     img:
-      'https://www.designreligion.co.uk/wp-content/uploads/upc2aeefb88f-1024x1024.jpg',
+      'https://www.riotgames.com/darkroom/800/4055f068b0bc39bbe60d08491a39994b:0ff2ceae3e7bed5e6f2c9c5a1aded2c0/riot-fist-container-white-red.png',
+    media: {
+      type: 'video',
+      uri: 'https://www.youtube.com/watch?v=zSo8Zbvh9mg',
+      id: 'zSo8Zbvh9mg',
+    },
   },
   {
     id: 2,
@@ -82,9 +83,14 @@ const companies = [
       'I was looking for a native video component in React Native and was not able to find one, so I decided to draft this piece about a library I found by react-native-community called react-native-video.',
     categories: [
       {
-        id: 5,
-        title: 'Jogos',
-        color: '#F16529',
+        id: 1,
+        title: 'Negócios',
+        color: '#8E2DE2',
+      },
+      {
+        id: 2,
+        title: 'Saúde',
+        color: '#f12711',
       },
     ],
     color: 'blue',
@@ -115,7 +121,7 @@ const companies = [
 ];
 
 export default function Main({navigation}) {
-  // var player;
+  var player;
   function handleOption(item) {}
   return (
     <Background>
@@ -142,22 +148,17 @@ export default function Main({navigation}) {
                 <TxtOption>{item.name}</TxtOption>
               </Line>
               <TxtDescription>{item.description}</TxtDescription>
-              {/* <Video
-                ref={ref => {
-                  player = ref;
-                }}
-                source={{uri: 'https://www.youtube.com/watch?v=ixbvCw-YiOA'}} // Can be a URL or a localfile.
-                onBuffer={() => null} // Callback when remote video is buffering
-                onEnd={() => null} // Callback when playback finishes
-                onError={() => null} // Callback when video cannot be loaded
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                }}
-              /> */}
+              {item.media && (
+                <MediaContainer>
+                  {item.media.type == 'video' && (
+                    <YouTube
+                      apiKey="AIzaSyAtwflJjX65-8nnONj0WtShZ98kUHpkCOg"
+                      videoId={item.media.id}
+                      style={{alignSelf: 'stretch', height: 250}}
+                    />
+                  )}
+                </MediaContainer>
+              )}
               <Footer>
                 {item.categories.map(cat => {
                   return (

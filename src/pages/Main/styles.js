@@ -26,7 +26,7 @@ export const Item = styled.View`
   align-items: center;
 `;
 
-export const Touch = styled.TouchableOpacity.attrs({
+export const Touch = styled.View.attrs({
   activeOpacity: 0.6,
 })`
   background-color: ${colors.app};
@@ -88,4 +88,10 @@ export const ContentText = styled.View`
   border-radius: 10px;
   justify-content: center;
   margin: 0 60px 5px;
+`;
+
+export const MediaContainer = styled.View`
+  height: 250px;
+  width: 100%;
+  margin: 5px 0px 10px;
 `;
