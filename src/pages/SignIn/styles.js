@@ -112,3 +112,14 @@ export const TitleBold = styled.Text`
   margin-top: 20px;
   /* margin-left: 3px; */
 `;
+
+export const ContainerLoading = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ActivityIndicator = styled.ActivityIndicator.attrs({
+  size: 'large',
+  color: colors.app,
+})``;

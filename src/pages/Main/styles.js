@@ -13,7 +13,7 @@ export const Text = styled.Text`
 
 export const List = styled.FlatList`
   /* margin-top: 10px; */
-  padding: 0px 5px;
+  padding: 0px 10px;
 `;
 
 export const ItemEmpty = styled.View`
@@ -95,3 +95,14 @@ export const MediaContainer = styled.View`
   width: 100%;
   margin: 5px 0px 10px;
 `;
+
+export const ContainerLoading = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ActivityIndicator = styled.ActivityIndicator.attrs({
+  size: 'large',
+  color: colors.app,
+})``;

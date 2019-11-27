@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import {colors, metrics} from '~/styles';
+import {colors} from '~/styles';
 
 export const Container = styled.SafeAreaView`
   flex-direction: row;

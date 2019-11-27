@@ -14,6 +14,8 @@ import {
   IconAwesome,
   Touch,
   TxtOption,
+  ContainerLoading,
+  ActivityIndicator,
 } from './styles';
 import Background from '~/components/Background';
 
@@ -24,14 +26,17 @@ import api from '~/services/api';
 export default function SignIn({navigation}) {
   const [name, setName] = useState('');
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadCategories();
   }, []);
 
   async function loadCategories() {
+    setLoading(true);
     const fetchedCategories = await api.get('/categories');
     setCategories(fetchedCategories.data);
+    setLoading(false);
   }
 
   function handleSubmit() {
@@ -75,14 +80,19 @@ export default function SignIn({navigation}) {
               value={name}
               onChangeText={setName}
             />
-            <List
-              listKey={(item, index) => `D${index.toString()}`}
-              data={categories}
-              keyExtractor={item => item.id}
-              numColumns={2}
-              renderItem={({item}) => (
-                <Item>
-                  {/* <ImageBackground
+            {loading ? (
+              <ContainerLoading>
+                <ActivityIndicator />
+              </ContainerLoading>
+            ) : (
+              <List
+                listKey={(item, index) => `D${index.toString()}`}
+                data={categories}
+                keyExtractor={item => item.id}
+                numColumns={2}
+                renderItem={({item}) => (
+                  <Item>
+                    {/* <ImageBackground
                     source={esporte}
                     resizeMode="stretch"
                     blurRadius={6}
@@ -92,26 +102,27 @@ export default function SignIn({navigation}) {
                       width: 150,
                       marginBottom: 15,
                     }}> */}
-                  <Touch
-                    selected={item.selected}
-                    color={item.color}
-                    tag={item.tag}
-                    onPress={() => handleOption(item)}>
-                    {item.selected && (
-                      <IconAwesome
-                        selected={item.selected}
-                        color={item.color}
-                        name="check"
-                      />
-                    )}
-                    <TxtOption selected={item.selected} color={item.color}>
-                      {item.title}
-                    </TxtOption>
-                  </Touch>
-                  {/* </ImageBackground> */}
-                </Item>
-              )}
-            />
+                    <Touch
+                      selected={item.selected}
+                      color={item.color}
+                      tag={item.tag}
+                      onPress={() => handleOption(item)}>
+                      {item.selected && (
+                        <IconAwesome
+                          selected={item.selected}
+                          color={item.color}
+                          name="check"
+                        />
+                      )}
+                      <TxtOption selected={item.selected} color={item.color}>
+                        {item.title}
+                      </TxtOption>
+                    </Touch>
+                    {/* </ImageBackground> */}
+                  </Item>
+                )}
+              />
+            )}
           </>
           <SubmitButton onPress={handleSubmit}>Acessar</SubmitButton>
         </Form>
